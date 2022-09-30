@@ -2,13 +2,13 @@
 import {get} from 'loadsh';
 
 import {IExecuteFunctions} from 'n8n-core';
-import {INodeExecutionData, INodeType, INodeTypeDescription,} from 'n8n-workflow';
+import {INodeExecutionData, INodeType, INodeTypeDescription} from 'n8n-workflow';
 
 // @ts-ignore
 import ical from 'ical';
 
 import iconv from 'iconv-lite';
-import {CalendarComponent, VEvent} from "../../types/ical";
+import {CalendarComponent, VEvent} from '../../types/ical';
 
 // noinspection JSUnusedGlobalSymbols
 export class ICalendarParser implements INodeType {
@@ -31,8 +31,7 @@ export class ICalendarParser implements INodeType {
 				default: 'data',
 				required: true,
 				placeholder: 'data',
-				description:
-					'The name of the binary key to get data from.',
+				description: 'The name of the binary key to get data from',
 			},
 		],
 	};
@@ -58,9 +57,9 @@ export class ICalendarParser implements INodeType {
 			const stringToParse = iconv.decode(buffer, 'utf8');
 			const data = Object.values<CalendarComponent>(ical.parseICS(stringToParse));
 
-			const events = data.filter(item => item.type === 'VEVENT') as VEvent[];
+			const events = data.filter((item) => item.type === 'VEVENT') as VEvent[];
 
-			events.forEach(event => {
+			events.forEach((event) => {
 				returnData.push({
 					json: event,
 				});
