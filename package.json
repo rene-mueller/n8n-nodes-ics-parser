@@ -1,7 +1,7 @@
 {
   "name": "n8n-nodes-ics-parser",
   "version": "0.1.0",
-  "description": "",
+  "description": "ics-parser is a node that converts a iCalendar binary to a json-object",
   "keywords": [
     "n8n-community-node-package"
   ],
@@ -19,9 +19,8 @@
   "scripts": {
     "build": "tsc && gulp build:icons",
     "dev": "tsc --watch",
-    "lint": "tslint -p tsconfig.json -c tslint.json && eslint nodes credentials package.json",
-    "lintfix": "tslint --fix -p tsconfig.json -c tslint.json && eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+    "lint": "tslint -p tsconfig.json -c tslint.json && eslint nodes package.json",
+    "lint:fix": "tslint --fix -p tsconfig.json -c tslint.json && eslint nodes package.json --fix"
   },
   "files": [
     "dist"
