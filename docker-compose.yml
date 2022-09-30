@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  n8n:
+    build:
+      dockerfile: Dockerfile
+      context: docker/
+    volumes:
+      - .:/app/:delegated
+    ports:
+      - "5678:5678"
+    networks:
+      - sdnet
+
+  node:
+    image: node:16
+    volumes:
+      - .:/app/:delegated
+    networks:
+      - sdnet
+
+networks:
+  sdnet:
+    driver: "bridge"

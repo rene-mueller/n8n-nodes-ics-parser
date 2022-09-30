@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+COMPOSE="docker-compose -f docker-compose.yml"
+
+if [ $# -gt 0 ]; then
+    if [ "$1" == "start" ]; then
+        shift 1
+        ./develop up --build
+
+    elif [ "$1" == "npm" ]; then
+        shift 1
+        $COMPOSE run --rm \
+            -w /app \
+            node \
+            npm "$@"
+
+    else
+        $COMPOSE "$@"
+    fi
+else
+    $COMPOSE ps
+fi
