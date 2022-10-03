@@ -14,7 +14,7 @@ import {CalendarComponent, VEvent} from '../../types/ical';
 export class ICalendarParser implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'iCalendar Parser',
-		name: 'iCalendarParser',
+		name: 'ICalendarParser',
 		group: ['transform'],
 		version: 1,
 		description: 'Parse iCalendar File',
