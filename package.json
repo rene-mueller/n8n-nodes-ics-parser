@@ -1,6 +1,6 @@
 {
   "name": "@clicksports/n8n-nodes-ics-parser",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ics-parser is a node that converts a iCalendar binary to a json-object",
   "keywords": [
     "n8n-community-node-package"
