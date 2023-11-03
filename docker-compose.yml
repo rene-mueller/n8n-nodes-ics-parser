@@ -15,8 +15,6 @@ services:
     image: node:16
     volumes:
       - .:/app/:delegated
-    networks:
-      - sdnet
 
 networks:
   sdnet:
