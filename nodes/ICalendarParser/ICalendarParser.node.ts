@@ -1,5 +1,4 @@
-// @ts-ignore
-import {get} from 'loadsh';
+import {get} from 'lodash';
 
 import {IExecuteFunctions} from 'n8n-core';
 import {INodeExecutionData, INodeType, INodeTypeDescription} from 'n8n-workflow';
