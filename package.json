@@ -1,6 +1,6 @@
 {
-  "name": "n8n-nodes-ics-parser",
-  "version": "0.1.0",
+  "name": "@rene-mueller/n8n-nodes-ics-parser",
+  "version": "1.0.0",
   "description": "ics-parser is a node that converts a iCalendar binary to a json-object",
   "keywords": [
     "n8n-community-node-package"
